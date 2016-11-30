@@ -11,83 +11,11 @@
 /* eslint max-len:0 */
 
 import React from "react";
-import { Link } from "react-router";
 import _ from "underscore";
-import { Flexbox, FlexItem } from "flexbox-react";
 
 import Highlighter from "../components/highlighter";
 import APIDoc from "./APIDoc";
-import Meta from "../examples/examples.json";
-import Examples from "../examples/index.js";
 import docsFile from "./docs.json";
-
-console.log("Examples", Examples);
-
-const Example = React.createClass({
-    render() {
-        const style = {
-            display: "inline-block",
-            margin: 5,
-            padding: 20,
-            borderStyle: "solid",
-            borderWidth: 1,
-            borderColor: "#DDD",
-            width: 160,
-            height: 160
-        };
-        const { example } = this.props;
-        const name = example.key;
-        const imgName = `${name}_thumbnail`;
-        const img = Examples[imgName];
-        console.log(" - img", img, name, imgName);
-        const link = (
-            <Link to={`example/${name}`}>{example.value.title}</Link>
-        );
-        return (
-            <FlexItem minWidth="220px" >
-                <div style={style}>
-                    <img src={img} alt={`${name}`}/>
-                </div>
-                <div style={{paddingLeft: 5, fontSize: "smaller"}}>
-                {link}
-                </div>
-            </FlexItem>
-        );
-    }
-});
-
-const TaggedExamples = React.createClass({
-    render() {
-        console.log("Tagged examples:");
-        const exampleList = [];
-        _.forEach(Meta, (value, key) => {
-            const tags = value.tags;
-            if (_.contains(tags, this.props.tag)) {
-                exampleList.push({key, value});
-            }
-        });
-        const examples = exampleList.map((example, i) => {
-            return (
-                <Example key={i} example={example} />
-            );
-        });
-        
-        if (examples.length > 0) {
-            return (
-                <div>
-                <h3>Examples</h3>
-                <Flexbox flexDirection="row" flexWrap="wrap">
-                    {examples}
-                </Flexbox>
-                </div>
-            );
-        } else {
-            return (
-                <div />
-            );
-        }
-    }
-});
 
 export default React.createClass({
 
@@ -102,17 +30,10 @@ export default React.createClass({
                 <div>API could not be found</div>
             );
         }
-        const title = docsFile[path].displayName;
 
         return (
             <div>
-                <h2>{title}</h2>
-                <div className="row">
-                    <div className="col-md-12">
-                        <TaggedExamples tag={component} />
-                    </div>
-                </div>
-                <hr />
+                <h2>API</h2>
                 <div className="row">
                     <div className="col-md-12">
                         <APIDoc file={path}/>

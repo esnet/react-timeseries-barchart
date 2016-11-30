@@ -84,8 +84,6 @@ export default React.createClass({
         const resizableStyle = {
         };
 
-        console.log("Barstack", series);
-
         return (
             <div
                 style={rowStyle}

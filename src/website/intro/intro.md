@@ -1,6 +1,14 @@
 # React Timeseries Barchart
 
-A horizontal barchart that summarizes a list of TimeSeries objects. It was formally part of [react-timeseries-charts](http://software.es.net/react-timeseries-charts) react-timeseries-charts. For charts visualizing a single TimeSeries in many different ways, see that library.
+A horizontal barchart that summarizes a list of TimeSeries objects. It was formally part of react-timeseries-charts. For charts visualizing a single TimeSeries in many different ways, see that library.
+
+The goal of this visualization is provide a high level summary of a collection of TimeSeries objects. Specifically, this is useful when a list of TimeSeries is a breakdown of another series and you would like to communicate what the relative contributions of each are.
+
+Each bar is a horizontal [boxplot](https://en.wikipedia.org/wiki/Box_plot) that shows:
+ - The max and min of the data (in the lighter shaded outer box)
+ - The [Interquartile range](https://en.wikipedia.org/wiki/Interquartile_range)(in the darker shaded inner box)
+
+In addition each box can show a marker.
 
 Getting started
 ---------------

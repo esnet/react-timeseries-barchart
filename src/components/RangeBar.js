@@ -39,8 +39,8 @@ export default class RangeBar extends React.Component {
         // Statistics-based range bar
         //
 
-        const avg = series.avg(column);
-        const stdev = series.stdev(column);
+        const perc25 = series.percentile(25, column);
+        const perc75 = series.percentile(75, column);
 
         let seriesMin = series.min(column);
         if (_.isUndefined(seriesMin)) seriesMin = 0;
@@ -50,8 +50,8 @@ export default class RangeBar extends React.Component {
 
         const start = scale(seriesMin);
         const end = scale(seriesMax);
-        const centerStart = scale(avg - stdev);
-        const centerEnd = scale(avg + stdev);
+        const centerStart = scale(perc25);
+        const centerEnd = scale(perc75);
 
         let backgroundWidth = end - start;
         if (backgroundWidth < 1) backgroundWidth = 1;

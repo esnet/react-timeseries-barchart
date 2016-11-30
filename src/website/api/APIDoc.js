@@ -90,7 +90,7 @@ export default React.createClass({
         const docs = docsFile[file];
         return (
             <div>
-                <h3>{docs.displayName} API</h3>
+                <h3>{docs.displayName}</h3>
                 <Markdown source={docs.description} />
                 <hr />
                 <h3>{docs.displayName} Props</h3>
