@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "description": "A visualization of a list of TimeSeries as a horizontal boxplot",
   "keywords": [
-    "axis",
     "charts",
     "react",
     "timeseries",
     "boxplot",
     "barchart"
   ],
-  "homepage": "http://software.es.net/react-axis",
+  "homepage": "http://software.es.net/react-timeseries-barchart",
   "main": "lib/entry",
   "author": "ESnet Tools Team <tools@es.net>",
   "repository": "esnet/react-timeseries-barchart",
