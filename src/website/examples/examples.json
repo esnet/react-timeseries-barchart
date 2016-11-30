@@ -1,0 +1,7 @@
+{
+    "basic": {
+        "title": "Network interfaces example",
+        "description": "This shows network interfaces as a breakdown of total traffic across those interfaces.",
+        "tags": ["HorizontalBarChart"]
+    }
+}
