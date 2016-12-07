@@ -1,6 +1,6 @@
 {
   "name": "react-timeseries-barchart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A visualization of a list of TimeSeries as a horizontal boxplot",
   "keywords": [
     "charts",
