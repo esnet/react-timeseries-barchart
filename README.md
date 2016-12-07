@@ -2,6 +2,8 @@
 
 A horizontal barchart that summarizes a list of TimeSeries objects. It was formally part of react-timeseries-charts. For charts visualizing a single TimeSeries in many different ways, see that library.
 
+![Diagram](https://github.com/esnet/react-timeseries-barchart/blob/master/screenshot.png)
+
 The goal of this visualization is provide a high level summary of a collection of TimeSeries objects. Specifically, this is useful when a list of TimeSeries is a breakdown of another series and you would like to communicate what the relative contributions of each are.
 
 Each bar is a horizontal [boxplot](https://en.wikipedia.org/wiki/Box_plot) that shows:
